@@ -4,6 +4,8 @@ import router from './router';
 import store from './store';
 import LoadingPage from './components/LoadingPage.vue';
 
+import './filters/filterPrice';
+
 Vue.config.productionTip = false;
 
 Vue.component('LoadingPage', LoadingPage);
