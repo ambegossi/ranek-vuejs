@@ -4,7 +4,10 @@
       <router-link to="/" class="logo">
         <img src="../assets/ranek.svg" alt="Ranek" />
       </router-link>
-      <router-link class="btn" to="/login">Vender / Login</router-link>
+      <router-link v-if="$store.state.login" class="btn" to="/user">
+        {{ name }}
+      </router-link>
+      <router-link v-else class="btn" to="/login">Vender / Login</router-link>
     </nav>
   </header>
 </template>
@@ -12,6 +15,13 @@
 <script>
 export default {
   name: 'Header',
+  computed: {
+    name() {
+      // shows first name only
+      return this.$store.state.user.name.replace(/ .*/, '');
+      // everything that comes after space is replaced by nothing
+    },
+  },
 };
 </script>
 
