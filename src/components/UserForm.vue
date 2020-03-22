@@ -25,7 +25,27 @@
 </template>
 
 <script>
-export default {};
+import mapFields from '../util/mapFields';
+
+export default {
+  computed: {
+    ...mapFields({
+      fields: [
+        'name',
+        'email',
+        'password',
+        'street',
+        'cep',
+        'number',
+        'district',
+        'city',
+        'state',
+      ],
+      base: 'user',
+      mutation: 'UPDATE_USER',
+    }),
+  },
+};
 </script>
 
 <style scoped>

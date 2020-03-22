@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>Crie sua Conta</h2>
-    <transition mode="out=in">
+    <transition mode="out-in">
       <button v-if="!create" class="btn" @click="create = true">
         Criar Conta
       </button>

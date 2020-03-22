@@ -25,7 +25,7 @@ export default new Vuex.Store({
       state.login = payload;
     },
     UPDATE_USER(state, payload) {
-      state.user = payload;
+      state.user = Object.assign(state.user, payload);
     },
   },
   actions: {
