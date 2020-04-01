@@ -58,12 +58,11 @@ export default {
   methods: {
     getProdutos() {
       this.products = null;
-      setTimeout(() => {
-        api.get(this.url).then(response => {
-          this.productsTotal = Number(response.headers['x-total-count']);
-          this.products = response.data;
-        });
-      }, 2500);
+
+      api.get(this.url).then(response => {
+        this.productsTotal = Number(response.headers['x-total-count']);
+        this.products = response.data;
+      });
     },
   },
   watch: {
