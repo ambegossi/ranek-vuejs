@@ -42,7 +42,7 @@
 </p>
 
 ## About
-Project developed at the [Origamid] Complete Vue.js course.(https://www.origamid.com/)
+Project developed at the [Origamid](https://www.origamid.com/) Complete Vue.js course.
 
 ## :rocket: Technologies
 
